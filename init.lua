@@ -1,7 +1,16 @@
 -- Parameters
 
-local YMIN = 16000
-local YMAX = 20000
+local YMIN = tonumber(minetest.settings:get("space_start"))
+local YMAX = tonumber(minetest.settings:get("space_end"))
+
+if YMIN == nil then
+	YMIN = 16000 
+end
+
+if YMAX == nil then
+	YMAX = 20000
+end
+
 local XMIN = -31000
 local XMAX = 31000
 local ZMIN = -31000
